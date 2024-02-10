@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homFragment">
+
+    <fragment
+        android:id="@+id/homFragment"
+        android:name="com.example.a652.HomFragment"
+        android:label="fragment_hom"
+        tools:layout="@layout/fragment_hom" >
+        <action
+            android:id="@+id/action_homFragment_to_regstrFragment"
+            app:destination="@id/regstrFragment"
+            app:popUpTo="@id/regstrFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homFragment_to_foydalanuvchiFragment"
+            app:destination="@id/foydalanuvchiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/regstrFragment"
+        android:name="com.example.a652.RegstrFragment"
+        android:label="fragment_regstr"
+        tools:layout="@layout/fragment_regstr" >
+        <action
+            android:id="@+id/action_regstrFragment_to_homFragment"
+            app:destination="@id/homFragment"
+            app:popUpTo="@id/homFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/foydalanuvchiFragment"
+        android:name="com.example.a652.FoydalanuvchiFragment"
+        android:label="fragment_foydalanuvchi"
+        tools:layout="@layout/fragment_foydalanuvchi" />
+</navigation>
